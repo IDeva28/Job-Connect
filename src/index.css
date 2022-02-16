@@ -1,0 +1,37 @@
+body {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0px;
+  padding: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+root,
+body,
+html {
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+img,
+label,
+li,
+p,
+a,
+small,
+span,
+ul {
+  margin: 0;
+  padding: 0;
+  border: none;
+  outline: none;
+  vertical-align: baseline;
+  background: transparent;
+}
