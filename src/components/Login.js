@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import logo from "../images/login-logo.svg";
+import hero from "../images/meet-svg.svg";
+import google from "../images/google.svg";
 
 const Login = (props) => {
   return (
@@ -13,6 +15,19 @@ const Login = (props) => {
           <SignIn>Sign in</SignIn>
         </div>
       </Nav>
+
+      <Section>
+        <Hero>
+          <h1>Welcome to your professional community</h1>
+          <img src={hero} alt="" />
+        </Hero>
+        <Form>
+          <Google>
+            <img src={google} alt="" />
+            Sign in with Google
+          </Google>
+        </Form>
+      </Section>
     </Container>
   );
 };
@@ -72,6 +87,86 @@ const SignIn = styled.a`
     background-color: rgba(46, 139, 87, 0.15);
     color: #0a66c2;
     text-decoration: none;
+  }
+`;
+
+const Section = styled.section`
+  display: flex;
+  align-content: start;
+  min-height: 700px;
+  padding-bottom: 138px;
+  padding-top: 40px;
+  padding: 60px 0;
+  position: relative;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1128px;
+  align-items: center;
+  margin: auto;
+  /* background-color: bisque; */
+  @media (max-width: 768px) {
+    min-height: 0px;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const Hero = styled.div`
+  width: 100%;
+  h1 {
+    padding-bottom: 0;
+    width: 55%;
+    font-size: 56px;
+    color: #2f2e41;
+    font-weight: 200;
+    line-height: 70px;
+    @media (max-width: 768px) {
+      text-align: center;
+      font-size: 20px;
+      width: 100%;
+      line-height: 2;
+    }
+  }
+  img {
+    /* z-index: -1; */
+    width: 700px;
+    height: 670px;
+    position: absolute;
+    bottom: 50px;
+    right: -100px;
+    @media (max-width: 768px) {
+      margin-top: 20px;
+      width: 100%;
+      position: initial;
+      height: initial;
+    }
+  }
+`;
+
+const Form = styled.div`
+  margin-top: 200px;
+  width: 400px;
+
+  @media (max-width: 768px) {
+    margin-top: 20px;
+  } ;
+`;
+const Google = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  width: 100%;
+  background-color: #fff;
+  border-radius: 28px;
+  vertical-align: middle;
+  z-index: 0;
+  transition-duration: 167ms;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.6);
+  &:hover {
+    background-color: rgba(207, 207, 207, 0.25);
+    color: rgba(0, 0, 0, 0.75);
   }
 `;
 
